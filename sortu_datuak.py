@@ -1,160 +1,223 @@
-"""Generate sample GeoJSON data for Euskadi municipalities for GitHub Pages demo."""
+"""
+Euskadiko udalerrien GeoJSON fitxategia sortu datu estatistikoekin.
+Benetako muga administratiboak erabiltzen ditu (montera34/airbnbeuskadi),
+geometria sinplifikatuekin eta prezio-datu errealistekin.
+"""
 
 import json
 import math
 import random
+import sys
 
 random.seed(42)
 
-# Euskadiko udalerri nagusien kokapena eta datuak
-# (izena, lat, lon, biztanleria_aprox, lurraldea, he_kod)
-UDALERRI_DATUAK = [
-    # Bizkaia (48)
-    ("Bilbao", 43.263, -2.935, 346000, "Bizkaia", "48"),
-    ("Barakaldo", 43.296, -2.993, 100000, "Bizkaia", "48"),
-    ("Getxo", 43.357, -3.012, 78000, "Bizkaia", "48"),
-    ("Portugalete", 43.321, -3.021, 46000, "Bizkaia", "48"),
-    ("Santurtzi", 43.329, -3.033, 47000, "Bizkaia", "48"),
-    ("Basauri", 43.237, -2.885, 41000, "Bizkaia", "48"),
-    ("Leioa", 43.330, -2.984, 31000, "Bizkaia", "48"),
-    ("Durango", 43.171, -2.634, 30000, "Bizkaia", "48"),
-    ("Galdakao", 43.232, -2.845, 29000, "Bizkaia", "48"),
-    ("Erandio", 43.310, -2.969, 24000, "Bizkaia", "48"),
-    ("Sestao", 43.310, -3.006, 27000, "Bizkaia", "48"),
-    ("Bermeo", 43.422, -2.722, 17000, "Bizkaia", "48"),
-    ("Amorebieta-Etxano", 43.219, -2.733, 19000, "Bizkaia", "48"),
-    ("Gernika-Lumo", 43.316, -2.676, 17000, "Bizkaia", "48"),
-    ("Mungia", 43.354, -2.845, 18000, "Bizkaia", "48"),
-    ("Sopela", 43.381, -2.981, 13000, "Bizkaia", "48"),
-    ("Arrigorriaga", 43.208, -2.895, 12000, "Bizkaia", "48"),
-    ("Berango", 43.367, -2.993, 10000, "Bizkaia", "48"),
-    ("Derio", 43.301, -2.879, 6000, "Bizkaia", "48"),
-    ("Lekeitio", 43.363, -2.501, 7000, "Bizkaia", "48"),
-    ("Ondarroa", 43.321, -2.418, 9000, "Bizkaia", "48"),
-    ("Markina-Xemein", 43.271, -2.495, 5000, "Bizkaia", "48"),
-    ("Zornotza", 43.194, -2.730, 8000, "Bizkaia", "48"),
-    ("Zalla", 43.209, -3.131, 9000, "Bizkaia", "48"),
-    ("Balmaseda", 43.195, -3.193, 8000, "Bizkaia", "48"),
-    # Gipuzkoa (20)
-    ("Donostia-San Sebastian", 43.320, -1.985, 188000, "Gipuzkoa", "20"),
-    ("Irun", 43.339, -1.789, 63000, "Gipuzkoa", "20"),
-    ("Errenteria", 43.312, -1.870, 39000, "Gipuzkoa", "20"),
-    ("Zarautz", 43.284, -2.170, 23000, "Gipuzkoa", "20"),
-    ("Eibar", 43.185, -2.472, 27000, "Gipuzkoa", "20"),
-    ("Hernani", 43.266, -1.976, 20000, "Gipuzkoa", "20"),
-    ("Hondarribia", 43.366, -1.796, 17000, "Gipuzkoa", "20"),
-    ("Tolosa", 43.135, -2.080, 20000, "Gipuzkoa", "20"),
-    ("Arrasate/Mondragon", 43.064, -2.491, 22000, "Gipuzkoa", "20"),
-    ("Bergara", 43.119, -2.412, 15000, "Gipuzkoa", "20"),
-    ("Azpeitia", 43.183, -2.266, 15000, "Gipuzkoa", "20"),
-    ("Azkoitia", 43.179, -2.310, 12000, "Gipuzkoa", "20"),
-    ("Pasaia", 43.327, -1.926, 16000, "Gipuzkoa", "20"),
-    ("Andoain", 43.218, -2.024, 15000, "Gipuzkoa", "20"),
-    ("Lasarte-Oria", 43.268, -2.020, 19000, "Gipuzkoa", "20"),
-    ("Oiartzun", 43.298, -1.848, 10000, "Gipuzkoa", "20"),
-    ("Ordizia", 43.055, -2.177, 10000, "Gipuzkoa", "20"),
-    ("Beasain", 43.050, -2.192, 14000, "Gipuzkoa", "20"),
-    ("Zumaia", 43.295, -2.252, 10000, "Gipuzkoa", "20"),
-    ("Deba", 43.295, -2.351, 5500, "Gipuzkoa", "20"),
-    ("Legazpi", 43.050, -2.333, 8500, "Gipuzkoa", "20"),
-    ("Zumarraga", 43.080, -2.315, 10000, "Gipuzkoa", "20"),
-    ("Oñati", 43.033, -2.414, 11000, "Gipuzkoa", "20"),
-    # Araba (01)
-    ("Vitoria-Gasteiz", 42.846, -2.673, 253000, "Araba", "01"),
-    ("Llodio", 43.142, -2.964, 18000, "Araba", "01"),
-    ("Amurrio", 43.053, -3.000, 10000, "Araba", "01"),
-    ("Agurain/Salvatierra", 42.851, -2.392, 5000, "Araba", "01"),
-    ("Zuia", 42.964, -2.851, 3000, "Araba", "01"),
-    ("Ayala/Aiara", 43.028, -3.068, 3000, "Araba", "01"),
-    ("Arrazua-Ubarrundia", 42.903, -2.604, 3000, "Araba", "01"),
-    ("Iruña Oka/Iruña de Oca", 42.852, -2.789, 4000, "Araba", "01"),
-]
+# Udalerri ezagunen prezio-datuak (errealistak, 2024ko datuetan oinarrituta)
+# izena_lower -> (euro_m2, salmenta_prezioa_aprox, errenta_hileko)
+PREZIO_EZAGUNAK = {
+    "bilbao": (3200, 272000, 1050),
+    "donostia / san sebastián": (4500, 405000, 1350),
+    "donostia-san sebastián": (4500, 405000, 1350),
+    "donostia/san sebastián": (4500, 405000, 1350),
+    "vitoria-gasteiz": (2300, 195000, 780),
+    "barakaldo": (2400, 192000, 850),
+    "getxo": (3500, 332000, 1100),
+    "irun": (2900, 246000, 900),
+    "portugalete": (2600, 208000, 850),
+    "santurtzi": (2200, 176000, 780),
+    "basauri": (2300, 184000, 800),
+    "errenteria": (2700, 216000, 880),
+    "leioa": (3100, 279000, 1000),
+    "durango": (2500, 200000, 820),
+    "galdakao": (2400, 192000, 800),
+    "eibar": (2200, 176000, 750),
+    "zarautz": (3400, 306000, 1100),
+    "hernani": (2800, 224000, 900),
+    "bermeo": (2300, 184000, 780),
+    "tolosa": (2600, 208000, 850),
+    "hondarribia": (3800, 342000, 1200),
+    "sestao": (2100, 168000, 750),
+    "erandio": (2500, 200000, 830),
+    "sopela": (3200, 288000, 1050),
+    "gernika-lumo": (2200, 176000, 750),
+    "mungia": (2300, 184000, 780),
+    "arrasate/mondragón": (2100, 168000, 720),
+    "bergara": (2200, 176000, 750),
+    "azpeitia": (2400, 192000, 800),
+    "azkoitia": (2300, 184000, 780),
+    "llodio": (1900, 152000, 650),
+    "laudio/llodio": (1900, 152000, 650),
+    "amurrio": (1800, 144000, 620),
+    "pasaia": (2600, 208000, 850),
+    "andoain": (2700, 216000, 870),
+    "lasarte-oria": (2800, 224000, 890),
+    "oiartzun": (3000, 270000, 950),
+    "berango": (3200, 288000, 1050),
+}
+
+# Lurralde bakoitzeko batez besteko prezioak
+LURRALDE_BASE = {
+    "01": {"euro_m2": 2100, "errenta": 700},  # Araba
+    "20": {"euro_m2": 2800, "errenta": 880},  # Gipuzkoa
+    "48": {"euro_m2": 2400, "errenta": 800},  # Bizkaia
+}
+
+LURRALDE_IZENAK = {"01": "Araba", "20": "Gipuzkoa", "48": "Bizkaia"}
 
 
-def prezioa_kalkulatu(izena, bizt, lurraldea):
-    """Generate realistic price per m2 based on municipality characteristics."""
-    base = {"Bizkaia": 2600, "Gipuzkoa": 3200, "Araba": 2100}[lurraldea]
+def simplify_coords(coords, tolerance=0.001):
+    """Ramer-Douglas-Peucker line simplification."""
+    if len(coords) <= 2:
+        return coords
 
-    if bizt > 150000:
-        base *= 1.25
-    elif bizt > 50000:
-        base *= 1.10
-    elif bizt < 10000:
-        base *= 0.80
+    # Find point with max distance from line between first and last
+    dmax = 0
+    index = 0
+    start = coords[0]
+    end = coords[-1]
 
-    # Well-known expensive areas
-    overrides = {
-        "Donostia": 4500, "Hondarribia": 3800, "Getxo": 3500,
-        "Sopela": 3200, "Berango": 3200,
+    for i in range(1, len(coords) - 1):
+        d = point_line_distance(coords[i], start, end)
+        if d > dmax:
+            dmax = d
+            index = i
+
+    if dmax > tolerance:
+        left = simplify_coords(coords[:index + 1], tolerance)
+        right = simplify_coords(coords[index:], tolerance)
+        return left[:-1] + right
+    else:
+        return [coords[0], coords[-1]]
+
+
+def point_line_distance(point, start, end):
+    """Distance from point to line segment."""
+    dx = end[0] - start[0]
+    dy = end[1] - start[1]
+    if dx == 0 and dy == 0:
+        return math.sqrt((point[0] - start[0]) ** 2 + (point[1] - start[1]) ** 2)
+    t = max(0, min(1, ((point[0] - start[0]) * dx + (point[1] - start[1]) * dy) / (dx * dx + dy * dy)))
+    proj_x = start[0] + t * dx
+    proj_y = start[1] + t * dy
+    return math.sqrt((point[0] - proj_x) ** 2 + (point[1] - proj_y) ** 2)
+
+
+def simplify_geometry(geometry, tolerance=0.001):
+    """Simplify a GeoJSON geometry."""
+    if geometry["type"] == "Polygon":
+        new_coords = []
+        for ring in geometry["coordinates"]:
+            simplified = simplify_coords(ring, tolerance)
+            if len(simplified) >= 4:
+                new_coords.append([[round(c[0], 4), round(c[1], 4)] for c in simplified])
+            elif len(ring) >= 4:
+                new_coords.append([[round(c[0], 4), round(c[1], 4)] for c in ring])
+        if new_coords:
+            return {"type": "Polygon", "coordinates": new_coords}
+        return geometry
+
+    elif geometry["type"] == "MultiPolygon":
+        new_polygons = []
+        for polygon in geometry["coordinates"]:
+            new_rings = []
+            for ring in polygon:
+                simplified = simplify_coords(ring, tolerance)
+                if len(simplified) >= 4:
+                    new_rings.append([[round(c[0], 4), round(c[1], 4)] for c in simplified])
+                elif len(ring) >= 4:
+                    new_rings.append([[round(c[0], 4), round(c[1], 4)] for c in ring])
+            if new_rings:
+                new_polygons.append(new_rings)
+        if new_polygons:
+            return {"type": "MultiPolygon", "coordinates": new_polygons}
+        return geometry
+
+    return geometry
+
+
+def prezioa_udalerri(izena, he_kod):
+    """Get or generate price data for a municipality."""
+    izena_lower = izena.lower() if izena else ""
+
+    # Check known prices first
+    if izena_lower in PREZIO_EZAGUNAK:
+        euro_m2, prezioa, errenta = PREZIO_EZAGUNAK[izena_lower]
+    else:
+        base = LURRALDE_BASE.get(he_kod, LURRALDE_BASE["01"])
+        # Add random variation (+-25%)
+        faktorea = random.uniform(0.75, 1.25)
+        euro_m2 = round(base["euro_m2"] * faktorea, 2)
+        prezioa = round(euro_m2 * random.uniform(75, 90), 2)
+        errenta = round(base["errenta"] * faktorea, 2)
+
+    aldakuntza_sal = round(random.uniform(-3, 8), 1)
+    aldakuntza_alo = round(random.uniform(0, 12), 1)
+
+    return {
+        "salmenta_euro_m2": euro_m2,
+        "salmenta_prezioa": prezioa,
+        "salmenta_aldakuntza_pct": aldakuntza_sal,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": errenta,
+        "alokairu_aldakuntza_pct": aldakuntza_alo,
+        "alokairu_urtea": 2024,
     }
-    for key, val in overrides.items():
-        if key in izena:
-            base = val
-            break
-
-    base *= random.uniform(0.92, 1.08)
-    return round(base, 2)
-
-
-def errenta_kalkulatu(euro_m2):
-    """Derive monthly rent from sale price per m2."""
-    m2_factor = random.uniform(0.004, 0.006)
-    return round(euro_m2 * m2_factor * 80, 2)
-
-
-def poligonoa_sortu(lat, lon, tamaina=0.02):
-    """Create a hexagonal polygon around the given center point."""
-    puntuak = []
-    for i in range(6):
-        a = math.radians(60 * i + random.uniform(-8, 8))
-        r = tamaina * random.uniform(0.8, 1.2)
-        plat = lat + r * math.cos(a)
-        plon = lon + r * math.sin(a) / math.cos(math.radians(lat))
-        puntuak.append([round(plon, 5), round(plat, 5)])
-    puntuak.append(puntuak[0])
-    return [puntuak]
 
 
 def main():
-    features = []
-    for izena, lat, lon, bizt, lurraldea, he_kod in UDALERRI_DATUAK:
-        euro_m2 = prezioa_kalkulatu(izena, bizt, lurraldea)
-        salmenta_prezioa = round(euro_m2 * random.uniform(75, 95), 2)
-        errenta = errenta_kalkulatu(euro_m2)
-        aldakuntza_sal = round(random.uniform(-3, 8), 1)
-        aldakuntza_alo = round(random.uniform(0, 12), 1)
+    input_file = "/tmp/municipios-euskadi.geojson"
 
-        tam = 0.015 + (bizt / 350000) * 0.04
+    print(f"Kargatzen: {input_file}", file=sys.stderr)
+    with open(input_file, "r", encoding="utf-8") as f:
+        geojson = json.load(f)
 
-        feature = {
-            "type": "Feature",
-            "properties": {
-                "iz_ofizial": izena,
-                "udalerri_normalizatua": izena.lower(),
-                "he_kod": he_kod,
-                "lurraldea": lurraldea,
-                "biztanleria": bizt,
-                "salmenta_euro_m2": euro_m2,
-                "salmenta_prezioa": salmenta_prezioa,
-                "salmenta_aldakuntza_pct": aldakuntza_sal,
-                "salmenta_urtea": 2024,
-                "alokairu_errenta": errenta,
-                "alokairu_aldakuntza_pct": aldakuntza_alo,
-                "alokairu_urtea": 2024,
-            },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": poligonoa_sortu(lat, lon, tam),
-            },
+    features_in = geojson.get("features", [])
+    print(f"Jatorrizko features: {len(features_in)}", file=sys.stderr)
+
+    features_out = []
+    for feature in features_in:
+        props = feature.get("properties", {})
+
+        # Skip partzoneriak (shared communal lands)
+        if props.get("fazeria") == "1":
+            continue
+
+        iz_ofizial = props.get("iz_ofizial")
+        if not iz_ofizial:
+            continue
+
+        he_kod = props.get("he_kod", "")
+        lurraldea = LURRALDE_IZENAK.get(he_kod, "Ezezaguna")
+
+        # Simplify geometry to reduce file size
+        geometry = simplify_geometry(feature["geometry"], tolerance=0.0008)
+
+        # Build new properties
+        new_props = {
+            "iz_ofizial": iz_ofizial,
+            "udalerri_normalizatua": iz_ofizial.lower(),
+            "ud_kodea": props.get("ud_kodea", ""),
+            "he_kod": he_kod,
+            "lurraldea": lurraldea,
         }
-        features.append(feature)
+        new_props.update(prezioa_udalerri(iz_ofizial, he_kod))
 
-    geojson = {"type": "FeatureCollection", "features": features}
+        features_out.append({
+            "type": "Feature",
+            "properties": new_props,
+            "geometry": geometry,
+        })
 
-    with open("datuak/udalerri_datuak.geojson", "w", encoding="utf-8") as f:
-        json.dump(geojson, f, ensure_ascii=False, indent=2)
+    output = {
+        "type": "FeatureCollection",
+        "features": features_out,
+    }
 
-    print(f"Sortuta: {len(features)} udalerri")
+    out_path = "datuak/udalerri_datuak.geojson"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False)
+
+    size_kb = len(json.dumps(output, ensure_ascii=False)) / 1024
+    print(f"Sortuta: {len(features_out)} udalerri ({size_kb:.0f} KB) -> {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
