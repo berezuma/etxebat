@@ -21,7 +21,46 @@
             <h1>Etxebat</h1>
             <span class="azpititulua">Euskadiko Higiezinen Mapa Estrategikoa</span>
         </div>
+        <button id="iturri-botoia" title="Datu-iturriak ikusi">Datu-iturriak</button>
     </header>
+
+    <!-- Datu-iturriak modala -->
+    <div id="iturri-modala" class="modala ezkutatua">
+        <div class="modal-edukia">
+            <button class="modal-itxi" title="Itxi">&times;</button>
+            <h2>Datu-iturriak</h2>
+            <p class="modal-azalpena">
+                Mapa honetako prezio-datuak iturri publiko ofizial eta pribatuetatik bildu dira.
+                Datuak 2025eko 4. hiruhilekoko eta 2026ko urtarrileko txostenetan oinarritzen dira.
+            </p>
+            <div class="iturri-zerrenda">
+                <div class="iturria">
+                    <h3>Idealista</h3>
+                    <p>Salmenta eta alokairu prezioak udalerrika. Espainiako higiezinen atari nagusia.</p>
+                    <a href="https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/euskadi/" target="_blank" rel="noopener">idealista.com &rarr;</a>
+                </div>
+                <div class="iturria">
+                    <h3>Fotocasa</h3>
+                    <p>Hileko prezio-indizea, probintzia eta udalerrika. Bigarren higiezinen atari handiena.</p>
+                    <a href="https://www.fotocasa.es/indice-precio-vivienda" target="_blank" rel="noopener">fotocasa.es &rarr;</a>
+                </div>
+                <div class="iturria">
+                    <h3>Eustat</h3>
+                    <p>Euskal Estatistika Erakundea. Etxebizitza-salerosketen estatistika ofiziala.</p>
+                    <a href="https://www.eustat.eus/" target="_blank" rel="noopener">eustat.eus &rarr;</a>
+                </div>
+                <div class="iturria">
+                    <h3>Eusko Jaurlaritza</h3>
+                    <p>Etxebizitza Saila. Alokairu Merkatuaren Estatistika (EMA) eta prezio-indizeak.</p>
+                    <a href="https://www.euskadi.eus/gobierno-vasco/-/indices-de-referencia-de-precios-de-alquiler/" target="_blank" rel="noopener">euskadi.eus &rarr;</a>
+                </div>
+            </div>
+            <div class="modal-oina">
+                <p><strong>Eguneratze-data:</strong> 2025/Q4 &ndash; 2026/Q1</p>
+                <p><strong>Estaldura:</strong> 126 udalerri datu zuzenarekin; gainerakoak lurraldeko batez bestekoan oinarritutako estimazioak.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Mapa edukiontzia -->
     <div id="mapa"></div>

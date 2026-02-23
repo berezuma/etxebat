@@ -153,6 +153,12 @@
     }
 
     html += "</div>";
+
+    // Datu-iturria erakutsi
+    var iturria = props.datu_iturria || "Idealista/Fotocasa";
+    var urtea = props.salmenta_urtea || "2025";
+    html += '<div class="popup-iturria">Iturria: ' + eskatu(iturria) + ' (' + urtea + ')</div>';
+
     layer.bindPopup(html, { maxWidth: 280 }).openPopup();
   }
 
@@ -326,10 +332,40 @@
     }
   }
 
+  // Datu-iturriak modala kudeatu
+  function modalaHasieratu() {
+    var botoia = document.getElementById("iturri-botoia");
+    var modala = document.getElementById("iturri-modala");
+    var itxiBotoia = modala ? modala.querySelector(".modal-itxi") : null;
+
+    if (botoia && modala) {
+      botoia.addEventListener("click", function () {
+        modala.classList.remove("ezkutatua");
+      });
+
+      if (itxiBotoia) {
+        itxiBotoia.addEventListener("click", function () {
+          modala.classList.add("ezkutatua");
+        });
+      }
+
+      modala.addEventListener("click", function (e) {
+        if (e.target === modala) {
+          modala.classList.add("ezkutatua");
+        }
+      });
+    }
+  }
+
   // Hasieratu dokumentua prest dagoenean
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", mapaHasieratu);
-  } else {
+  function hasieratu() {
     mapaHasieratu();
+    modalaHasieratu();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", hasieratu);
+  } else {
+    hasieratu();
   }
 })();

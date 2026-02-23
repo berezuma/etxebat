@@ -209,6 +209,142 @@ body {
     }
 }
 
+/* Datu-iturriak botoia */
+#iturri-botoia {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#iturri-botoia:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Modala */
+.modala {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.modala.ezkutatua {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-edukia {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 28px 32px;
+    max-width: 560px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modal-edukia h2 {
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.modal-azalpena {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.modal-itxi {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-itxi:hover {
+    color: #333;
+}
+
+.iturri-zerrenda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.iturria {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px;
+    border-left: 3px solid #1d91c0;
+}
+
+.iturria h3 {
+    font-size: 0.95em;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.iturria p {
+    font-size: 0.8em;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.iturria a {
+    font-size: 0.8em;
+    color: #1d91c0;
+    text-decoration: none;
+}
+
+.iturria a:hover {
+    text-decoration: underline;
+}
+
+.modal-oina {
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+    font-size: 0.82em;
+    color: #888;
+    line-height: 1.6;
+}
+
+.modal-oina strong {
+    color: #555;
+}
+
+/* Popup iturria */
+.popup-iturria {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    color: #aaa;
+    font-style: italic;
+}
+
 /* Erantzunkorra */
 @media (max-width: 768px) {
     #goiburua h1 {
@@ -219,5 +355,15 @@ body {
     }
     .legenda {
         font-size: 11px;
+    }
+    .iturri-zerrenda {
+        grid-template-columns: 1fr;
+    }
+    .modal-edukia {
+        padding: 20px;
+    }
+    #iturri-botoia {
+        font-size: 0.75em;
+        padding: 5px 10px;
     }
 }
