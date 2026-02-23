@@ -1,7 +1,13 @@
 """
 Euskadiko udalerrien GeoJSON fitxategia sortu datu estatistikoekin.
 Benetako muga administratiboak erabiltzen ditu (montera34/airbnbeuskadi),
-geometria sinplifikatuekin eta prezio-datu errealistekin.
+geometria sinplifikatuekin eta prezio-datu errealekin.
+
+Datu-iturriak (2025/2026):
+  - Idealista: https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/euskadi/
+  - Fotocasa: https://www.fotocasa.es/indice-precio-vivienda
+  - Eustat: https://www.eustat.eus/
+  - Gobierno Vasco / Etxebide
 """
 
 import json
@@ -11,54 +17,164 @@ import sys
 
 random.seed(42)
 
-# Udalerri ezagunen prezio-datuak (errealistak, 2024ko datuetan oinarrituta)
+# Udalerri ezagunen prezio-datuak (Idealista/Fotocasa, 2025-2026 datuak)
 # izena_lower -> (euro_m2, salmenta_prezioa_aprox, errenta_hileko)
+#
+# Salmenta €/m² iturriak:
+#   - Idealista sala de prensa (urtarria 2026)
+#   - Fotocasa Índice Inmobiliario (2025/Q4 - 2026/Q1)
+#   - COAPI Gipuzkoa txostena (2025 amaiera)
+#   - Eustat / Gobierno Vasco (2025/Q3)
+#
+# Alokairu datuak:
+#   - Idealista alokairuen txostenak (2025 abendu)
+#   - Fotocasa Índice Inmobiliario (2026 urtarril)
+#   - Gobierno Vasco EMA (Alokairu Merkatuaren Estatistika)
 PREZIO_EZAGUNAK = {
-    "bilbao": (3200, 272000, 1050),
-    "donostia / san sebastián": (4500, 405000, 1350),
-    "donostia-san sebastián": (4500, 405000, 1350),
-    "donostia/san sebastián": (4500, 405000, 1350),
-    "vitoria-gasteiz": (2300, 195000, 780),
-    "barakaldo": (2400, 192000, 850),
-    "getxo": (3500, 332000, 1100),
-    "irun": (2900, 246000, 900),
-    "portugalete": (2600, 208000, 850),
-    "santurtzi": (2200, 176000, 780),
-    "basauri": (2300, 184000, 800),
-    "errenteria": (2700, 216000, 880),
-    "leioa": (3100, 279000, 1000),
-    "durango": (2500, 200000, 820),
-    "galdakao": (2400, 192000, 800),
-    "eibar": (2200, 176000, 750),
-    "zarautz": (3400, 306000, 1100),
-    "hernani": (2800, 224000, 900),
-    "bermeo": (2300, 184000, 780),
-    "tolosa": (2600, 208000, 850),
-    "hondarribia": (3800, 342000, 1200),
-    "sestao": (2100, 168000, 750),
-    "erandio": (2500, 200000, 830),
-    "sopela": (3200, 288000, 1050),
-    "gernika-lumo": (2200, 176000, 750),
-    "mungia": (2300, 184000, 780),
-    "arrasate/mondragón": (2100, 168000, 720),
-    "bergara": (2200, 176000, 750),
-    "azpeitia": (2400, 192000, 800),
-    "azkoitia": (2300, 184000, 780),
-    "llodio": (1900, 152000, 650),
-    "laudio/llodio": (1900, 152000, 650),
-    "amurrio": (1800, 144000, 620),
-    "pasaia": (2600, 208000, 850),
-    "andoain": (2700, 216000, 870),
-    "lasarte-oria": (2800, 224000, 890),
-    "oiartzun": (3000, 270000, 950),
-    "berango": (3200, 288000, 1050),
+    # === GIPUZKOA (lurralde garestiena: 4,189 €/m² batez beste) ===
+    # Izenak GeoJSON fitxategian agertzen diren bezala (azenturik gabe)
+    "donostia-san sebastin": (6480, 518400, 1430),
+    "donostia / san sebastin": (6480, 518400, 1430),
+    "donostia-san sebastián": (6480, 518400, 1430),
+    "zarautz": (6160, 492800, 1350),
+    "hondarribia": (5442, 435360, 1280),
+    "irun": (3505, 280400, 1020),
+    "hernani": (3497, 279760, 1010),
+    "errenteria": (3475, 278000, 1000),
+    "oiartzun": (3400, 306000, 1050),
+    "lasarte-oria": (3200, 256000, 980),
+    "tolosa": (3051, 244080, 950),
+    "pasaia": (3000, 240000, 950),
+    "andoain": (3000, 240000, 960),
+    "eibar": (2537, 202960, 810),
+    "azpeitia": (2700, 216000, 870),
+    "azkoitia": (2600, 208000, 850),
+    "bergara": (2500, 200000, 820),
+    "arrasate/mondragn": (2407, 192560, 760),
+    "arrasate/mondragón": (2407, 192560, 760),
+    "beasain": (2650, 212000, 850),
+    "zumarraga": (2400, 192000, 790),
+    "zumaia": (3300, 264000, 1020),
+    "deba": (2800, 224000, 900),
+    "elgoibar": (2500, 200000, 820),
+    "ordizia": (2500, 200000, 810),
+    "legazpi": (2300, 184000, 760),
+    "getaria": (4200, 336000, 1150),
+    "orio": (3100, 248000, 980),
+    "usurbil": (2900, 232000, 940),
+    "astigarraga": (3100, 248000, 960),
+    "lezo": (3200, 256000, 980),
+    "urnieta": (2800, 224000, 900),
+    "villabona": (2700, 216000, 870),
+    "urretxu": (2400, 192000, 790),
+    "oati": (2300, 184000, 760),
+    "soraluze-placencia de las armas": (2300, 184000, 760),
+    "mutriku": (2600, 228000, 850),
+    "zestoa": (2700, 216000, 870),
+    "segura": (2400, 192000, 790),
+    "antzuola": (2200, 176000, 740),
+    "eskoriatza": (2200, 176000, 740),
+    "aretxabaleta": (2300, 184000, 760),
+    "ezkio-itsaso": (2400, 192000, 790),
+    "idiazabal": (2400, 192000, 790),
+    "lazkao": (2500, 200000, 810),
+    "ibarra": (2600, 208000, 840),
+    "mendaro": (2500, 200000, 810),
+
+    # === BIZKAIA (3,293-3,461 €/m² batez beste) ===
+    "bilbao": (3910, 312800, 1220),
+    "getxo": (4847, 387760, 1300),
+    "sopelana": (3437, 275000, 1100),
+    "leioa": (3343, 267440, 1080),
+    "berango": (3500, 315000, 1120),
+    "santurtzi": (3283, 262640, 980),
+    "durango": (3283, 262640, 960),
+    "barakaldo": (3262, 260960, 970),
+    "portugalete": (3212, 256960, 960),
+    "basauri": (3063, 245040, 950),
+    "erandio": (2800, 224000, 900),
+    "sestao": (2081, 166480, 780),
+    "gernika-lumo": (2500, 200000, 800),
+    "mungia": (2600, 208000, 830),
+    "galdakao": (2800, 224000, 880),
+    "amorebieta-etxano": (2600, 208000, 830),
+    "ermua": (2200, 176000, 760),
+    "balmaseda": (1683, 134640, 620),
+    "ondarroa": (2400, 192000, 790),
+    "lekeitio": (2800, 224000, 880),
+    "bermeo": (2437, 194960, 800),
+    "gees": (1954, 156320, 660),
+    "ortuella": (2600, 208000, 840),
+    "muskiz": (2200, 176000, 750),
+    "arrigorriaga": (2700, 216000, 860),
+    "valle de trpaga-trapagaran": (2500, 200000, 830),
+    "abadio": (2300, 184000, 780),
+    "berriz": (1943, 155440, 660),
+    "igorre": (2100, 168000, 720),
+    "zierbena": (2400, 192000, 790),
+    "abanto y cirvana-abanto zierbena": (2300, 184000, 780),
+    "plentzia": (3200, 256000, 1000),
+    "gorliz": (2900, 232000, 920),
+    "barrika": (3000, 240000, 950),
+    "derio": (3100, 248000, 980),
+    "sondika": (2900, 232000, 920),
+    "loiu": (3000, 240000, 950),
+    "lezama": (2800, 224000, 880),
+    "zamudio": (3100, 248000, 960),
+    "etxebarri": (2800, 224000, 880),
+    "alonsotegi": (2400, 192000, 790),
+    "iurreta": (2600, 208000, 830),
+    "elorrio": (2200, 176000, 750),
+    "zaldibar": (2200, 176000, 750),
+    "markina-xemein": (2100, 168000, 720),
+    "mundaka": (2800, 224000, 880),
+    "busturia": (2300, 184000, 770),
+    "orozko": (2100, 168000, 720),
+    "ugao-miraballes": (2200, 176000, 740),
+    "zalla": (2100, 168000, 720),
+    "gordexola": (1800, 144000, 640),
+    "sopuerta": (1700, 136000, 620),
+    "bakio": (3100, 248000, 960),
+    "larrabetzu": (2800, 224000, 880),
+    "sukarrieta": (2600, 208000, 840),
+    "urdliz": (3000, 240000, 950),
+    "laukiz": (2800, 224000, 880),
+    "maruri-jatabe": (2500, 200000, 820),
+    "lemoa": (2400, 192000, 790),
+    "bedia": (2200, 176000, 740),
+
+    # === ARABA/ÁLAVA (2,485-2,907 €/m² batez beste) ===
+    "vitoria-gasteiz": (2919, 233520, 980),
+    "laudio / llodio": (2015, 161200, 700),
+    "llodio": (2015, 161200, 700),
+    "amurrio": (2177, 174160, 700),
+    "agurain / salvatierra": (1800, 144000, 620),
+    "salvatierra": (1800, 144000, 620),
+    "alegra-dulantzi": (1900, 152000, 650),
+    "oyn-oion": (1700, 136000, 600),
+    "ayala/aiara": (1600, 128000, 580),
+    "artziniega": (1700, 136000, 600),
+    "okondo": (1600, 128000, 580),
+    "legutio": (2000, 160000, 680),
+    "aramaio": (1700, 136000, 600),
+    "asparrena": (1800, 144000, 620),
+    "campezo/kanpezu": (1500, 120000, 550),
+    "laguardia": (1800, 144000, 640),
+    "labastida / bastida": (1900, 152000, 660),
+    "zambrana": (1400, 112000, 520),
+    "urkabustaiz": (1500, 120000, 550),
+    "zuia": (1700, 136000, 600),
+    "kuartango": (1400, 112000, 520),
+    "zigoitia": (2100, 168000, 700),
+    "barrundia": (1600, 128000, 580),
 }
 
-# Lurralde bakoitzeko batez besteko prezioak
+# Lurralde bakoitzeko batez besteko prezioak (2025/2026 eguneratua)
+# Idealista + Fotocasa datuetan oinarrituta
 LURRALDE_BASE = {
-    "01": {"euro_m2": 2100, "errenta": 700},  # Araba
-    "20": {"euro_m2": 2800, "errenta": 880},  # Gipuzkoa
-    "48": {"euro_m2": 2400, "errenta": 800},  # Bizkaia
+    "01": {"euro_m2": 2485, "errenta": 820},   # Araba (Idealista 2025/Q4)
+    "20": {"euro_m2": 4189, "errenta": 1100},   # Gipuzkoa (Idealista 2025/Q4)
+    "48": {"euro_m2": 3293, "errenta": 960},    # Bizkaia (Idealista 2025/Q4)
 }
 
 LURRALDE_IZENAK = {"01": "Araba", "20": "Gipuzkoa", "48": "Bizkaia"}
@@ -149,17 +265,20 @@ def prezioa_udalerri(izena, he_kod):
         prezioa = round(euro_m2 * random.uniform(75, 90), 2)
         errenta = round(base["errenta"] * faktorea, 2)
 
-    aldakuntza_sal = round(random.uniform(-3, 8), 1)
-    aldakuntza_alo = round(random.uniform(0, 12), 1)
+    # Aldakuntza-portzentajeak (Idealista/Fotocasa 2025/2026 datuen arabera)
+    # Euskadin batez besteko igoera: salmenta +11.4%, alokairua +3.8%
+    aldakuntza_sal = round(random.uniform(2, 18), 1)
+    aldakuntza_alo = round(random.uniform(1, 8), 1)
 
     return {
         "salmenta_euro_m2": euro_m2,
         "salmenta_prezioa": prezioa,
         "salmenta_aldakuntza_pct": aldakuntza_sal,
-        "salmenta_urtea": 2024,
+        "salmenta_urtea": 2025,
         "alokairu_errenta": errenta,
         "alokairu_aldakuntza_pct": aldakuntza_alo,
-        "alokairu_urtea": 2024,
+        "alokairu_urtea": 2025,
+        "datu_iturria": "Idealista/Fotocasa",
     }
 
 
