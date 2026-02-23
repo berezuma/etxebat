@@ -1,0 +1,2917 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Bilbao",
+        "udalerri_normalizatua": "bilbao",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 346000,
+        "salmenta_euro_m2": 3322.5,
+        "salmenta_prezioa": 250849.46,
+        "salmenta_aldakuntza_pct": -0.5,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1209.41,
+        "alokairu_aldakuntza_pct": 8.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.93073,
+              43.32602
+            ],
+            [
+              -2.87675,
+              43.29451
+            ],
+            [
+              -2.87358,
+              43.24449
+            ],
+            [
+              -2.93509,
+              43.21879
+            ],
+            [
+              -3.00018,
+              43.22999
+            ],
+            [
+              -2.99219,
+              43.28775
+            ],
+            [
+              -2.93073,
+              43.32602
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Barakaldo",
+        "udalerri_normalizatua": "barakaldo",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 100000,
+        "salmenta_euro_m2": 2900.85,
+        "salmenta_prezioa": 264524.48,
+        "salmenta_aldakuntza_pct": 5.9,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 931.29,
+        "alokairu_aldakuntza_pct": 8.4,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.9944,
+              43.31876
+            ],
+            [
+              -2.96169,
+              43.30553
+            ],
+            [
+              -2.96507,
+              43.28717
+            ],
+            [
+              -2.99666,
+              43.2686
+            ],
+            [
+              -3.02891,
+              43.28377
+            ],
+            [
+              -3.03018,
+              43.31199
+            ],
+            [
+              -2.9944,
+              43.31876
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Getxo",
+        "udalerri_normalizatua": "getxo",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 78000,
+        "salmenta_euro_m2": 3431.98,
+        "salmenta_prezioa": 295290.35,
+        "salmenta_aldakuntza_pct": 3.8,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1553.67,
+        "alokairu_aldakuntza_pct": 10.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.01123,
+              43.38287
+            ],
+            [
+              -2.98867,
+              43.3699
+            ],
+            [
+              -2.98754,
+              43.34808
+            ],
+            [
+              -3.00994,
+              43.33696
+            ],
+            [
+              -3.0409,
+              43.34307
+            ],
+            [
+              -3.03957,
+              43.36759
+            ],
+            [
+              -3.01123,
+              43.38287
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Portugalete",
+        "udalerri_normalizatua": "portugalete",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 46000,
+        "salmenta_euro_m2": 2479.15,
+        "salmenta_prezioa": 199173.81,
+        "salmenta_aldakuntza_pct": 4.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1164.87,
+        "alokairu_aldakuntza_pct": 7.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.02379,
+              43.34302
+            ],
+            [
+              -2.99939,
+              43.33216
+            ],
+            [
+              -2.99778,
+              43.30788
+            ],
+            [
+              -3.02148,
+              43.29925
+            ],
+            [
+              -3.04913,
+              43.31167
+            ],
+            [
+              -3.0414,
+              43.32813
+            ],
+            [
+              -3.02379,
+              43.34302
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Santurtzi",
+        "udalerri_normalizatua": "santurtzi",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 47000,
+        "salmenta_euro_m2": 2523.23,
+        "salmenta_prezioa": 202753.69,
+        "salmenta_aldakuntza_pct": 7.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 892.61,
+        "alokairu_aldakuntza_pct": 10.5,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.03454,
+              43.35061
+            ],
+            [
+              -3.00521,
+              43.34147
+            ],
+            [
+              -3.01088,
+              43.31996
+            ],
+            [
+              -3.03097,
+              43.30818
+            ],
+            [
+              -3.05706,
+              43.31729
+            ],
+            [
+              -3.05464,
+              43.34059
+            ],
+            [
+              -3.03454,
+              43.35061
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Basauri",
+        "udalerri_normalizatua": "basauri",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 41000,
+        "salmenta_euro_m2": 2483.24,
+        "salmenta_prezioa": 235785.51,
+        "salmenta_aldakuntza_pct": -2.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 997.08,
+        "alokairu_aldakuntza_pct": 0.6,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.88809,
+              43.25757
+            ],
+            [
+              -2.86134,
+              43.24516
+            ],
+            [
+              -2.86131,
+              43.22967
+            ],
+            [
+              -2.88878,
+              43.21728
+            ],
+            [
+              -2.91357,
+              43.22839
+            ],
+            [
+              -2.91223,
+              43.24509
+            ],
+            [
+              -2.88809,
+              43.25757
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Leioa",
+        "udalerri_normalizatua": "leioa",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 31000,
+        "salmenta_euro_m2": 2675.59,
+        "salmenta_prezioa": 229403.5,
+        "salmenta_aldakuntza_pct": 4.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 970.42,
+        "alokairu_aldakuntza_pct": 1.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.98446,
+              43.3482
+            ],
+            [
+              -2.95696,
+              43.33824
+            ],
+            [
+              -2.96112,
+              43.32181
+            ],
+            [
+              -2.98134,
+              43.30848
+            ],
+            [
+              -3.0054,
+              43.32305
+            ],
+            [
+              -3.00651,
+              43.34032
+            ],
+            [
+              -2.98446,
+              43.3482
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Durango",
+        "udalerri_normalizatua": "durango",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 30000,
+        "salmenta_euro_m2": 2455.58,
+        "salmenta_prezioa": 221616.63,
+        "salmenta_aldakuntza_pct": 5.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 997.7,
+        "alokairu_aldakuntza_pct": 6.4,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.63727,
+              43.18797
+            ],
+            [
+              -2.61057,
+              43.1842
+            ],
+            [
+              -2.61086,
+              43.15871
+            ],
+            [
+              -2.63288,
+              43.15585
+            ],
+            [
+              -2.66122,
+              43.16218
+            ],
+            [
+              -2.65707,
+              43.17827
+            ],
+            [
+              -2.63727,
+              43.18797
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Galdakao",
+        "udalerri_normalizatua": "galdakao",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 29000,
+        "salmenta_euro_m2": 2420.79,
+        "salmenta_prezioa": 218384.41,
+        "salmenta_aldakuntza_pct": -1.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1071.28,
+        "alokairu_aldakuntza_pct": 5.7,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.84468,
+              43.24859
+            ],
+            [
+              -2.82275,
+              43.23923
+            ],
+            [
+              -2.82193,
+              43.22402
+            ],
+            [
+              -2.84642,
+              43.21591
+            ],
+            [
+              -2.87025,
+              43.22005
+            ],
+            [
+              -2.8657,
+              43.24157
+            ],
+            [
+              -2.84468,
+              43.24859
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Erandio",
+        "udalerri_normalizatua": "erandio",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 24000,
+        "salmenta_euro_m2": 2607.31,
+        "salmenta_prezioa": 201858.16,
+        "salmenta_aldakuntza_pct": 0.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 928.08,
+        "alokairu_aldakuntza_pct": 7.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.97063,
+              43.32571
+            ],
+            [
+              -2.94847,
+              43.3212
+            ],
+            [
+              -2.94346,
+              43.30107
+            ],
+            [
+              -2.97103,
+              43.29538
+            ],
+            [
+              -2.99053,
+              43.29936
+            ],
+            [
+              -2.98778,
+              43.3165
+            ],
+            [
+              -2.97063,
+              43.32571
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Sestao",
+        "udalerri_normalizatua": "sestao",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 27000,
+        "salmenta_euro_m2": 2781.17,
+        "salmenta_prezioa": 240351.11,
+        "salmenta_aldakuntza_pct": 5.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1100.31,
+        "alokairu_aldakuntza_pct": 9.7,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.0078,
+              43.32511
+            ],
+            [
+              -2.98537,
+              43.31906
+            ],
+            [
+              -2.98238,
+              43.30029
+            ],
+            [
+              -3.00744,
+              43.28844
+            ],
+            [
+              -3.02522,
+              43.29968
+            ],
+            [
+              -3.03125,
+              43.31954
+            ],
+            [
+              -3.0078,
+              43.32511
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Bermeo",
+        "udalerri_normalizatua": "bermeo",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 17000,
+        "salmenta_euro_m2": 2495.44,
+        "salmenta_prezioa": 196651.1,
+        "salmenta_aldakuntza_pct": 1.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 977.66,
+        "alokairu_aldakuntza_pct": 3.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.7239,
+              43.44176
+            ],
+            [
+              -2.69909,
+              43.43196
+            ],
+            [
+              -2.70557,
+              43.41488
+            ],
+            [
+              -2.72568,
+              43.40297
+            ],
+            [
+              -2.74723,
+              43.41441
+            ],
+            [
+              -2.73844,
+              43.43054
+            ],
+            [
+              -2.7239,
+              43.44176
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Amorebieta-Etxano",
+        "udalerri_normalizatua": "amorebieta-etxano",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 19000,
+        "salmenta_euro_m2": 2594.03,
+        "salmenta_prezioa": 205641.59,
+        "salmenta_aldakuntza_pct": -2.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 996.54,
+        "alokairu_aldakuntza_pct": 4.5,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.73012,
+              43.23442
+            ],
+            [
+              -2.71211,
+              43.22625
+            ],
+            [
+              -2.70857,
+              43.20922
+            ],
+            [
+              -2.73632,
+              43.20161
+            ],
+            [
+              -2.75117,
+              43.21239
+            ],
+            [
+              -2.75799,
+              43.22818
+            ],
+            [
+              -2.73012,
+              43.23442
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Gernika-Lumo",
+        "udalerri_normalizatua": "gernika-lumo",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 17000,
+        "salmenta_euro_m2": 2632.94,
+        "salmenta_prezioa": 226021.85,
+        "salmenta_aldakuntza_pct": -2.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1157.64,
+        "alokairu_aldakuntza_pct": 7.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.67598,
+              43.33533
+            ],
+            [
+              -2.65354,
+              43.32765
+            ],
+            [
+              -2.6573,
+              43.31014
+            ],
+            [
+              -2.67666,
+              43.29788
+            ],
+            [
+              -2.69232,
+              43.30792
+            ],
+            [
+              -2.69287,
+              43.325
+            ],
+            [
+              -2.67598,
+              43.33533
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Mungia",
+        "udalerri_normalizatua": "mungia",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 18000,
+        "salmenta_euro_m2": 2639.32,
+        "salmenta_prezioa": 230643.92,
+        "salmenta_aldakuntza_pct": 3.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1021.62,
+        "alokairu_aldakuntza_pct": 6.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.8425,
+              43.36893
+            ],
+            [
+              -2.82621,
+              43.36083
+            ],
+            [
+              -2.82293,
+              43.34535
+            ],
+            [
+              -2.84379,
+              43.33822
+            ],
+            [
+              -2.86248,
+              43.34781
+            ],
+            [
+              -2.86953,
+              43.36402
+            ],
+            [
+              -2.8425,
+              43.36893
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Sopela",
+        "udalerri_normalizatua": "sopela",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 13000,
+        "salmenta_euro_m2": 3454.0,
+        "salmenta_prezioa": 264110.85,
+        "salmenta_aldakuntza_pct": -0.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1223.08,
+        "alokairu_aldakuntza_pct": 11.2,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.97823,
+              43.39988
+            ],
+            [
+              -2.96441,
+              43.38856
+            ],
+            [
+              -2.96099,
+              43.37069
+            ],
+            [
+              -2.98185,
+              43.36131
+            ],
+            [
+              -2.99715,
+              43.37488
+            ],
+            [
+              -2.99807,
+              43.38971
+            ],
+            [
+              -2.97823,
+              43.39988
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Arrigorriaga",
+        "udalerri_normalizatua": "arrigorriaga",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 12000,
+        "salmenta_euro_m2": 2667.97,
+        "salmenta_prezioa": 250198.49,
+        "salmenta_aldakuntza_pct": -1.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 911.08,
+        "alokairu_aldakuntza_pct": 1.3,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.8947,
+              43.22288
+            ],
+            [
+              -2.87351,
+              43.21644
+            ],
+            [
+              -2.8736,
+              43.20064
+            ],
+            [
+              -2.89353,
+              43.19174
+            ],
+            [
+              -2.91845,
+              43.20056
+            ],
+            [
+              -2.91497,
+              43.21432
+            ],
+            [
+              -2.8947,
+              43.22288
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Berango",
+        "udalerri_normalizatua": "berango",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 3085.66,
+        "salmenta_prezioa": 231643.32,
+        "salmenta_aldakuntza_pct": 4.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1368.12,
+        "alokairu_aldakuntza_pct": 3.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.99147,
+              43.38344
+            ],
+            [
+              -2.97772,
+              43.37371
+            ],
+            [
+              -2.96946,
+              43.35966
+            ],
+            [
+              -2.99555,
+              43.35067
+            ],
+            [
+              -3.01385,
+              43.36005
+            ],
+            [
+              -3.01021,
+              43.37267
+            ],
+            [
+              -2.99147,
+              43.38344
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Derio",
+        "udalerri_normalizatua": "derio",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 6000,
+        "salmenta_euro_m2": 2016.19,
+        "salmenta_prezioa": 187464.6,
+        "salmenta_aldakuntza_pct": 6.5,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 902.0,
+        "alokairu_aldakuntza_pct": 10.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.88057,
+              43.31507
+            ],
+            [
+              -2.8597,
+              43.31134
+            ],
+            [
+              -2.86225,
+              43.29209
+            ],
+            [
+              -2.87963,
+              43.28749
+            ],
+            [
+              -2.90171,
+              43.29394
+            ],
+            [
+              -2.89819,
+              43.31176
+            ],
+            [
+              -2.88057,
+              43.31507
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Lekeitio",
+        "udalerri_normalizatua": "lekeitio",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 7000,
+        "salmenta_euro_m2": 2206.94,
+        "salmenta_prezioa": 166614.54,
+        "salmenta_aldakuntza_pct": 0.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 966.31,
+        "alokairu_aldakuntza_pct": 11.2,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.4989,
+              43.38104
+            ],
+            [
+              -2.48314,
+              43.36906
+            ],
+            [
+              -2.48592,
+              43.35543
+            ],
+            [
+              -2.50358,
+              43.34503
+            ],
+            [
+              -2.52119,
+              43.35293
+            ],
+            [
+              -2.51846,
+              43.37014
+            ],
+            [
+              -2.4989,
+              43.38104
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Ondarroa",
+        "udalerri_normalizatua": "ondarroa",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 9000,
+        "salmenta_euro_m2": 2178.29,
+        "salmenta_prezioa": 173287.13,
+        "salmenta_aldakuntza_pct": -0.9,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 705.3,
+        "alokairu_aldakuntza_pct": 3.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.41534,
+              43.33992
+            ],
+            [
+              -2.3986,
+              43.33036
+            ],
+            [
+              -2.39489,
+              43.31191
+            ],
+            [
+              -2.41826,
+              43.30216
+            ],
+            [
+              -2.43914,
+              43.30976
+            ],
+            [
+              -2.44169,
+              43.32898
+            ],
+            [
+              -2.41534,
+              43.33992
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Markina-Xemein",
+        "udalerri_normalizatua": "markina-xemein",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 5000,
+        "salmenta_euro_m2": 2001.95,
+        "salmenta_prezioa": 154486.58,
+        "salmenta_aldakuntza_pct": 5.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 779.82,
+        "alokairu_aldakuntza_pct": 3.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.49436,
+              43.28664
+            ],
+            [
+              -2.47628,
+              43.27947
+            ],
+            [
+              -2.47419,
+              43.26358
+            ],
+            [
+              -2.49153,
+              43.25295
+            ],
+            [
+              -2.51527,
+              43.26269
+            ],
+            [
+              -2.51397,
+              43.28027
+            ],
+            [
+              -2.49436,
+              43.28664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zornotza",
+        "udalerri_normalizatua": "zornotza",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 8000,
+        "salmenta_euro_m2": 2034.81,
+        "salmenta_prezioa": 155458.42,
+        "salmenta_aldakuntza_pct": 0.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 867.39,
+        "alokairu_aldakuntza_pct": 3.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.7277,
+              43.21123
+            ],
+            [
+              -2.71313,
+              43.20205
+            ],
+            [
+              -2.71157,
+              43.18669
+            ],
+            [
+              -2.72894,
+              43.18048
+            ],
+            [
+              -2.75194,
+              43.18428
+            ],
+            [
+              -2.7513,
+              43.20402
+            ],
+            [
+              -2.7277,
+              43.21123
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zalla",
+        "udalerri_normalizatua": "zalla",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 9000,
+        "salmenta_euro_m2": 2118.44,
+        "salmenta_prezioa": 171633.89,
+        "salmenta_aldakuntza_pct": -3.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 863.62,
+        "alokairu_aldakuntza_pct": 3.4,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.13144,
+              43.22554
+            ],
+            [
+              -3.11177,
+              43.2163
+            ],
+            [
+              -3.11398,
+              43.2021
+            ],
+            [
+              -3.13081,
+              43.1904
+            ],
+            [
+              -3.14826,
+              43.20306
+            ],
+            [
+              -3.15131,
+              43.21539
+            ],
+            [
+              -3.13144,
+              43.22554
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Balmaseda",
+        "udalerri_normalizatua": "balmaseda",
+        "he_kod": "48",
+        "lurraldea": "Bizkaia",
+        "biztanleria": 8000,
+        "salmenta_euro_m2": 2124.24,
+        "salmenta_prezioa": 173558.41,
+        "salmenta_aldakuntza_pct": 5.3,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 957.92,
+        "alokairu_aldakuntza_pct": 8.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.19448,
+              43.20896
+            ],
+            [
+              -3.17747,
+              43.20372
+            ],
+            [
+              -3.17136,
+              43.18604
+            ],
+            [
+              -3.19049,
+              43.17974
+            ],
+            [
+              -3.20993,
+              43.18846
+            ],
+            [
+              -3.21124,
+              43.20368
+            ],
+            [
+              -3.19448,
+              43.20896
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Donostia-San Sebastian",
+        "udalerri_normalizatua": "donostia-san sebastian",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 188000,
+        "salmenta_euro_m2": 4315.67,
+        "salmenta_prezioa": 380301.85,
+        "salmenta_aldakuntza_pct": 5.3,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1384.84,
+        "alokairu_aldakuntza_pct": 9.2,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.99033,
+              43.35518
+            ],
+            [
+              -1.9365,
+              43.34488
+            ],
+            [
+              -1.94949,
+              43.30491
+            ],
+            [
+              -1.981,
+              43.27853
+            ],
+            [
+              -2.03332,
+              43.29913
+            ],
+            [
+              -2.03545,
+              43.34355
+            ],
+            [
+              -1.99033,
+              43.35518
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Irun",
+        "udalerri_normalizatua": "irun",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 63000,
+        "salmenta_euro_m2": 3573.76,
+        "salmenta_prezioa": 335936.27,
+        "salmenta_aldakuntza_pct": 3.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1653.32,
+        "alokairu_aldakuntza_pct": 8.6,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.78895,
+              43.36414
+            ],
+            [
+              -1.75813,
+              43.35156
+            ],
+            [
+              -1.76392,
+              43.32674
+            ],
+            [
+              -1.78716,
+              43.31909
+            ],
+            [
+              -1.81887,
+              43.32755
+            ],
+            [
+              -1.81668,
+              43.35078
+            ],
+            [
+              -1.78895,
+              43.36414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Errenteria",
+        "udalerri_normalizatua": "errenteria",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 39000,
+        "salmenta_euro_m2": 3084.59,
+        "salmenta_prezioa": 236124.34,
+        "salmenta_aldakuntza_pct": -0.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1128.09,
+        "alokairu_aldakuntza_pct": 3.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.86974,
+              43.32864
+            ],
+            [
+              -1.8462,
+              43.32382
+            ],
+            [
+              -1.85155,
+              43.30318
+            ],
+            [
+              -1.8693,
+              43.29222
+            ],
+            [
+              -1.89016,
+              43.30306
+            ],
+            [
+              -1.89725,
+              43.32286
+            ],
+            [
+              -1.86974,
+              43.32864
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zarautz",
+        "udalerri_normalizatua": "zarautz",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 23000,
+        "salmenta_euro_m2": 3243.05,
+        "salmenta_prezioa": 288341.07,
+        "salmenta_aldakuntza_pct": 5.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1482.32,
+        "alokairu_aldakuntza_pct": 4.6,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.17313,
+              43.30043
+            ],
+            [
+              -2.14515,
+              43.2928
+            ],
+            [
+              -2.15135,
+              43.27367
+            ],
+            [
+              -2.1717,
+              43.26609
+            ],
+            [
+              -2.18893,
+              43.27657
+            ],
+            [
+              -2.19129,
+              43.2914
+            ],
+            [
+              -2.17313,
+              43.30043
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Eibar",
+        "udalerri_normalizatua": "eibar",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 27000,
+        "salmenta_euro_m2": 2958.86,
+        "salmenta_prezioa": 241805.71,
+        "salmenta_aldakuntza_pct": 1.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1268.35,
+        "alokairu_aldakuntza_pct": 2.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.47219,
+              43.20039
+            ],
+            [
+              -2.45425,
+              43.19189
+            ],
+            [
+              -2.4496,
+              43.1762
+            ],
+            [
+              -2.46855,
+              43.16605
+            ],
+            [
+              -2.4918,
+              43.17458
+            ],
+            [
+              -2.49376,
+              43.19167
+            ],
+            [
+              -2.47219,
+              43.20039
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Hernani",
+        "udalerri_normalizatua": "hernani",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 20000,
+        "salmenta_euro_m2": 3052.37,
+        "salmenta_prezioa": 248880.84,
+        "salmenta_aldakuntza_pct": 1.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1348.53,
+        "alokairu_aldakuntza_pct": 9.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.97402,
+              43.28151
+            ],
+            [
+              -1.96062,
+              43.27434
+            ],
+            [
+              -1.95149,
+              43.25543
+            ],
+            [
+              -1.97495,
+              43.24769
+            ],
+            [
+              -1.99873,
+              43.25811
+            ],
+            [
+              -1.9992,
+              43.27742
+            ],
+            [
+              -1.97402,
+              43.28151
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Hondarribia",
+        "udalerri_normalizatua": "hondarribia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 17000,
+        "salmenta_euro_m2": 3617.21,
+        "salmenta_prezioa": 272765.13,
+        "salmenta_aldakuntza_pct": -1.6,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1245.7,
+        "alokairu_aldakuntza_pct": 8.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.79563,
+              43.38103
+            ],
+            [
+              -1.77298,
+              43.37446
+            ],
+            [
+              -1.77392,
+              43.35862
+            ],
+            [
+              -1.79736,
+              43.3517
+            ],
+            [
+              -1.82107,
+              43.35754
+            ],
+            [
+              -1.81329,
+              43.37152
+            ],
+            [
+              -1.79563,
+              43.38103
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Tolosa",
+        "udalerri_normalizatua": "tolosa",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 20000,
+        "salmenta_euro_m2": 3103.72,
+        "salmenta_prezioa": 274824.93,
+        "salmenta_aldakuntza_pct": 1.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1469.01,
+        "alokairu_aldakuntza_pct": 8.6,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.08301,
+              43.15347
+            ],
+            [
+              -2.06241,
+              43.14181
+            ],
+            [
+              -2.05771,
+              43.12388
+            ],
+            [
+              -2.08056,
+              43.12034
+            ],
+            [
+              -2.1044,
+              43.12771
+            ],
+            [
+              -2.1004,
+              43.14277
+            ],
+            [
+              -2.08301,
+              43.15347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Arrasate/Mondragon",
+        "udalerri_normalizatua": "arrasate/mondragon",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 22000,
+        "salmenta_euro_m2": 3133.73,
+        "salmenta_prezioa": 266740.64,
+        "salmenta_aldakuntza_pct": 6.3,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1173.89,
+        "alokairu_aldakuntza_pct": 9.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.49412,
+              43.08462
+            ],
+            [
+              -2.46701,
+              43.07325
+            ],
+            [
+              -2.47148,
+              43.05463
+            ],
+            [
+              -2.49286,
+              43.04327
+            ],
+            [
+              -2.51341,
+              43.05309
+            ],
+            [
+              -2.5115,
+              43.07286
+            ],
+            [
+              -2.49412,
+              43.08462
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Bergara",
+        "udalerri_normalizatua": "bergara",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 15000,
+        "salmenta_euro_m2": 3167.01,
+        "salmenta_prezioa": 283829.1,
+        "salmenta_aldakuntza_pct": 6.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1149.45,
+        "alokairu_aldakuntza_pct": 10.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.41504,
+              43.13814
+            ],
+            [
+              -2.39331,
+              43.12824
+            ],
+            [
+              -2.39347,
+              43.11063
+            ],
+            [
+              -2.40857,
+              43.1001
+            ],
+            [
+              -2.42858,
+              43.1105
+            ],
+            [
+              -2.42961,
+              43.12792
+            ],
+            [
+              -2.41504,
+              43.13814
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Azpeitia",
+        "udalerri_normalizatua": "azpeitia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 15000,
+        "salmenta_euro_m2": 3394.72,
+        "salmenta_prezioa": 302210.45,
+        "salmenta_aldakuntza_pct": -2.9,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1236.37,
+        "alokairu_aldakuntza_pct": 11.4,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.26888,
+              43.20106
+            ],
+            [
+              -2.24414,
+              43.19227
+            ],
+            [
+              -2.24567,
+              43.17335
+            ],
+            [
+              -2.26593,
+              43.16433
+            ],
+            [
+              -2.28237,
+              43.17416
+            ],
+            [
+              -2.28372,
+              43.19141
+            ],
+            [
+              -2.26888,
+              43.20106
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Azkoitia",
+        "udalerri_normalizatua": "azkoitia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 12000,
+        "salmenta_euro_m2": 3241.76,
+        "salmenta_prezioa": 273815.94,
+        "salmenta_aldakuntza_pct": 1.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1312.74,
+        "alokairu_aldakuntza_pct": 9.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.31115,
+              43.19668
+            ],
+            [
+              -2.29317,
+              43.18717
+            ],
+            [
+              -2.292,
+              43.17318
+            ],
+            [
+              -2.30759,
+              43.16249
+            ],
+            [
+              -2.32767,
+              43.17277
+            ],
+            [
+              -2.33014,
+              43.18599
+            ],
+            [
+              -2.31115,
+              43.19668
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Pasaia",
+        "udalerri_normalizatua": "pasaia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 16000,
+        "salmenta_euro_m2": 3314.99,
+        "salmenta_prezioa": 313373.1,
+        "salmenta_aldakuntza_pct": 0.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1339.06,
+        "alokairu_aldakuntza_pct": 1.2,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.92776,
+              43.34194
+            ],
+            [
+              -1.91076,
+              43.3348
+            ],
+            [
+              -1.90788,
+              43.31922
+            ],
+            [
+              -1.92912,
+              43.30996
+            ],
+            [
+              -1.94356,
+              43.32054
+            ],
+            [
+              -1.94467,
+              43.33683
+            ],
+            [
+              -1.92776,
+              43.34194
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Andoain",
+        "udalerri_normalizatua": "andoain",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 15000,
+        "salmenta_euro_m2": 3390.83,
+        "salmenta_prezioa": 293243.33,
+        "salmenta_aldakuntza_pct": 1.8,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1339.73,
+        "alokairu_aldakuntza_pct": 2.2,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.02737,
+              43.23751
+            ],
+            [
+              -2.00166,
+              43.22754
+            ],
+            [
+              -2.00726,
+              43.2114
+            ],
+            [
+              -2.02468,
+              43.20428
+            ],
+            [
+              -2.04311,
+              43.20802
+            ],
+            [
+              -2.0485,
+              43.22704
+            ],
+            [
+              -2.02737,
+              43.23751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Lasarte-Oria",
+        "udalerri_normalizatua": "lasarte-oria",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 19000,
+        "salmenta_euro_m2": 3004.65,
+        "salmenta_prezioa": 271286.45,
+        "salmenta_aldakuntza_pct": 5.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1252.97,
+        "alokairu_aldakuntza_pct": 2.7,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.01985,
+              43.28483
+            ],
+            [
+              -1.99685,
+              43.27809
+            ],
+            [
+              -2.00283,
+              43.25829
+            ],
+            [
+              -2.02083,
+              43.25009
+            ],
+            [
+              -2.04496,
+              43.25907
+            ],
+            [
+              -2.03885,
+              43.2745
+            ],
+            [
+              -2.01985,
+              43.28483
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Oiartzun",
+        "udalerri_normalizatua": "oiartzun",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 3282.14,
+        "salmenta_prezioa": 256470.17,
+        "salmenta_aldakuntza_pct": -2.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1141.56,
+        "alokairu_aldakuntza_pct": 0.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.84832,
+              43.31475
+            ],
+            [
+              -1.83146,
+              43.30592
+            ],
+            [
+              -1.82796,
+              43.28841
+            ],
+            [
+              -1.84769,
+              43.28065
+            ],
+            [
+              -1.87073,
+              43.2909
+            ],
+            [
+              -1.86802,
+              43.30711
+            ],
+            [
+              -1.84832,
+              43.31475
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Ordizia",
+        "udalerri_normalizatua": "ordizia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 3422.04,
+        "salmenta_prezioa": 285749.85,
+        "salmenta_aldakuntza_pct": 4.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1393.22,
+        "alokairu_aldakuntza_pct": 10.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.17533,
+              43.06832
+            ],
+            [
+              -2.16037,
+              43.06362
+            ],
+            [
+              -2.15817,
+              43.04573
+            ],
+            [
+              -2.17589,
+              43.04131
+            ],
+            [
+              -2.19826,
+              43.04709
+            ],
+            [
+              -2.19463,
+              43.06474
+            ],
+            [
+              -2.17533,
+              43.06832
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Beasain",
+        "udalerri_normalizatua": "beasain",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 14000,
+        "salmenta_euro_m2": 3196.82,
+        "salmenta_prezioa": 244904.66,
+        "salmenta_aldakuntza_pct": 1.8,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1043.37,
+        "alokairu_aldakuntza_pct": 3.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.19332,
+              43.06385
+            ],
+            [
+              -2.16821,
+              43.05724
+            ],
+            [
+              -2.16907,
+              43.03985
+            ],
+            [
+              -2.19538,
+              43.03243
+            ],
+            [
+              -2.20743,
+              43.04249
+            ],
+            [
+              -2.21059,
+              43.0592
+            ],
+            [
+              -2.19332,
+              43.06385
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zumaia",
+        "udalerri_normalizatua": "zumaia",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 3277.57,
+        "salmenta_prezioa": 305867.6,
+        "salmenta_aldakuntza_pct": 3.4,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1144.0,
+        "alokairu_aldakuntza_pct": 7.6,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.25204,
+              43.3085
+            ],
+            [
+              -2.23453,
+              43.30308
+            ],
+            [
+              -2.23067,
+              43.28503
+            ],
+            [
+              -2.25086,
+              43.27763
+            ],
+            [
+              -2.27382,
+              43.28453
+            ],
+            [
+              -2.27053,
+              43.30445
+            ],
+            [
+              -2.25204,
+              43.3085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Deba",
+        "udalerri_normalizatua": "deba",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 5500,
+        "salmenta_euro_m2": 2541.5,
+        "salmenta_prezioa": 206599.41,
+        "salmenta_aldakuntza_pct": 7.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 944.74,
+        "alokairu_aldakuntza_pct": 4.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.3509,
+              43.31368
+            ],
+            [
+              -2.33162,
+              43.30233
+            ],
+            [
+              -2.33451,
+              43.28845
+            ],
+            [
+              -2.35009,
+              43.27778
+            ],
+            [
+              -2.37193,
+              43.2869
+            ],
+            [
+              -2.3708,
+              43.3018
+            ],
+            [
+              -2.3509,
+              43.31368
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Legazpi",
+        "udalerri_normalizatua": "legazpi",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 8500,
+        "salmenta_euro_m2": 2735.17,
+        "salmenta_prezioa": 229104.19,
+        "salmenta_aldakuntza_pct": -1.7,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1180.83,
+        "alokairu_aldakuntza_pct": 11.7,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.3324,
+              43.0643
+            ],
+            [
+              -2.31484,
+              43.05946
+            ],
+            [
+              -2.31729,
+              43.04315
+            ],
+            [
+              -2.33649,
+              43.03157
+            ],
+            [
+              -2.34893,
+              43.04311
+            ],
+            [
+              -2.35082,
+              43.05923
+            ],
+            [
+              -2.3324,
+              43.0643
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zumarraga",
+        "udalerri_normalizatua": "zumarraga",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 3310.9,
+        "salmenta_prezioa": 282013.99,
+        "salmenta_aldakuntza_pct": 6.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1204.33,
+        "alokairu_aldakuntza_pct": 11.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.31661,
+              43.09643
+            ],
+            [
+              -2.29306,
+              43.08996
+            ],
+            [
+              -2.29298,
+              43.07067
+            ],
+            [
+              -2.31704,
+              43.06538
+            ],
+            [
+              -2.33429,
+              43.07332
+            ],
+            [
+              -2.33272,
+              43.08973
+            ],
+            [
+              -2.31661,
+              43.09643
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Oñati",
+        "udalerri_normalizatua": "oñati",
+        "he_kod": "20",
+        "lurraldea": "Gipuzkoa",
+        "biztanleria": 11000,
+        "salmenta_euro_m2": 3364.12,
+        "salmenta_prezioa": 271339.09,
+        "salmenta_aldakuntza_pct": 3.5,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1237.22,
+        "alokairu_aldakuntza_pct": 12.0,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.41406,
+              43.04697
+            ],
+            [
+              -2.39582,
+              43.04048
+            ],
+            [
+              -2.39457,
+              43.02452
+            ],
+            [
+              -2.41374,
+              43.0179
+            ],
+            [
+              -2.43366,
+              43.02294
+            ],
+            [
+              -2.43101,
+              43.04051
+            ],
+            [
+              -2.41406,
+              43.04697
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Vitoria-Gasteiz",
+        "udalerri_normalizatua": "vitoria-gasteiz",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 253000,
+        "salmenta_euro_m2": 2740.73,
+        "salmenta_prezioa": 207947.26,
+        "salmenta_aldakuntza_pct": 4.8,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 1203.6,
+        "alokairu_aldakuntza_pct": 9.7,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.67503,
+              42.89277
+            ],
+            [
+              -2.60821,
+              42.86802
+            ],
+            [
+              -2.6307,
+              42.82815
+            ],
+            [
+              -2.67304,
+              42.8005
+            ],
+            [
+              -2.73587,
+              42.8254
+            ],
+            [
+              -2.72591,
+              42.86754
+            ],
+            [
+              -2.67503,
+              42.89277
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Llodio",
+        "udalerri_normalizatua": "llodio",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 18000,
+        "salmenta_euro_m2": 2085.53,
+        "salmenta_prezioa": 186548.32,
+        "salmenta_aldakuntza_pct": 4.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 804.17,
+        "alokairu_aldakuntza_pct": 1.9,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.96424,
+              43.16226
+            ],
+            [
+              -2.94278,
+              43.15189
+            ],
+            [
+              -2.94148,
+              43.13158
+            ],
+            [
+              -2.96663,
+              43.12259
+            ],
+            [
+              -2.98239,
+              43.13364
+            ],
+            [
+              -2.98552,
+              43.15239
+            ],
+            [
+              -2.96424,
+              43.16226
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Amurrio",
+        "udalerri_normalizatua": "amurrio",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 10000,
+        "salmenta_euro_m2": 2225.12,
+        "salmenta_prezioa": 168481.6,
+        "salmenta_aldakuntza_pct": 3.9,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 736.4,
+        "alokairu_aldakuntza_pct": 11.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.99664,
+              43.07057
+            ],
+            [
+              -2.98411,
+              43.05999
+            ],
+            [
+              -2.97851,
+              43.04313
+            ],
+            [
+              -2.99963,
+              43.03561
+            ],
+            [
+              -3.01657,
+              43.04772
+            ],
+            [
+              -3.01665,
+              43.06144
+            ],
+            [
+              -2.99664,
+              43.07057
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Agurain/Salvatierra",
+        "udalerri_normalizatua": "agurain/salvatierra",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 5000,
+        "salmenta_euro_m2": 1646.36,
+        "salmenta_prezioa": 128270.21,
+        "salmenta_aldakuntza_pct": 3.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 666.75,
+        "alokairu_aldakuntza_pct": 9.5,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.39363,
+              42.86389
+            ],
+            [
+              -2.37168,
+              42.85765
+            ],
+            [
+              -2.36973,
+              42.84309
+            ],
+            [
+              -2.38992,
+              42.83575
+            ],
+            [
+              -2.4079,
+              42.84316
+            ],
+            [
+              -2.41407,
+              42.85759
+            ],
+            [
+              -2.39363,
+              42.86389
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Zuia",
+        "udalerri_normalizatua": "zuia",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 3000,
+        "salmenta_euro_m2": 1787.85,
+        "salmenta_prezioa": 158318.08,
+        "salmenta_aldakuntza_pct": 1.9,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 617.3,
+        "alokairu_aldakuntza_pct": 4.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.85046,
+              42.98019
+            ],
+            [
+              -2.83486,
+              42.97116
+            ],
+            [
+              -2.83599,
+              42.95616
+            ],
+            [
+              -2.85033,
+              42.94877
+            ],
+            [
+              -2.86884,
+              42.95513
+            ],
+            [
+              -2.87247,
+              42.97351
+            ],
+            [
+              -2.85046,
+              42.98019
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Ayala/Aiara",
+        "udalerri_normalizatua": "ayala/aiara",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 3000,
+        "salmenta_euro_m2": 1624.96,
+        "salmenta_prezioa": 153654.41,
+        "salmenta_aldakuntza_pct": 0.0,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 691.12,
+        "alokairu_aldakuntza_pct": 6.8,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -3.0668,
+              43.04482
+            ],
+            [
+              -3.05057,
+              43.03767
+            ],
+            [
+              -3.04687,
+              43.0191
+            ],
+            [
+              -3.0666,
+              43.01085
+            ],
+            [
+              -3.08539,
+              43.02116
+            ],
+            [
+              -3.08662,
+              43.03657
+            ],
+            [
+              -3.0668,
+              43.04482
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Arrazua-Ubarrundia",
+        "udalerri_normalizatua": "arrazua-ubarrundia",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 3000,
+        "salmenta_euro_m2": 1727.78,
+        "salmenta_prezioa": 154495.61,
+        "salmenta_aldakuntza_pct": 6.2,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 735.12,
+        "alokairu_aldakuntza_pct": 7.5,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.60151,
+              42.91914
+            ],
+            [
+              -2.58686,
+              42.91117
+            ],
+            [
+              -2.58443,
+              42.89429
+            ],
+            [
+              -2.6018,
+              42.88901
+            ],
+            [
+              -2.62038,
+              42.89714
+            ],
+            [
+              -2.62342,
+              42.90937
+            ],
+            [
+              -2.60151,
+              42.91914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "iz_ofizial": "Iruña Oka/Iruña de Oca",
+        "udalerri_normalizatua": "iruña oka/iruña de oca",
+        "he_kod": "01",
+        "lurraldea": "Araba",
+        "biztanleria": 4000,
+        "salmenta_euro_m2": 1806.74,
+        "salmenta_prezioa": 154687.74,
+        "salmenta_aldakuntza_pct": 6.1,
+        "salmenta_urtea": 2024,
+        "alokairu_errenta": 842.23,
+        "alokairu_aldakuntza_pct": 3.1,
+        "alokairu_urtea": 2024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2.7871,
+              42.86728
+            ],
+            [
+              -2.76802,
+              42.8592
+            ],
+            [
+              -2.77317,
+              42.84598
+            ],
+            [
+              -2.79133,
+              42.83887
+            ],
+            [
+              -2.81128,
+              42.84522
+            ],
+            [
+              -2.80994,
+              42.86219
+            ],
+            [
+              -2.7871,
+              42.86728
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

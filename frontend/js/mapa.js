@@ -115,7 +115,7 @@
 
   // Popup edukia sortu
   function popupErakutsi(layer, props) {
-    var izena = props.udalerri_normalizatua || props.NOMBRE_MUNICIPIO || props.nombre || "Ezezaguna";
+    var izena = props.iz_ofizial || props.udalerri_normalizatua || props.NOMBRE_MUNICIPIO || props.nombre || "Ezezaguna";
 
     var html = '<h3>' + eskatu(izena) + '</h3>';
     html += '<div class="popup-datuak">';
@@ -213,7 +213,7 @@
     if (!container) return;
 
     var conf = GERUZA_MOTAK[unekoa];
-    var izena = props.udalerri_normalizatua || props.NOMBRE_MUNICIPIO || props.nombre || "—";
+    var izena = props.iz_ofizial || props.udalerri_normalizatua || props.NOMBRE_MUNICIPIO || props.nombre || "—";
     var balioa = props[conf.eremua];
 
     var html = "<h4>" + eskatu(izena) + "</h4>";
@@ -268,9 +268,17 @@
     infoPanelaGarbitu();
   }
 
-  // Datuak kargatu API-tik
+  // Datuak kargatu (fitxategi estatikotik edo API-tik)
   function datuakKargatu() {
-    fetch("/api/geojson")
+    // GitHub Pages-en bide erlatiboa erabili; bestela API-a
+    var script = document.currentScript || document.querySelector('script[src*="mapa.js"]');
+    var basePath = "";
+    if (script && script.src) {
+      // mapa.js frontend/js/ karpetan dago; datuak/ erroan dago
+      basePath = script.src.replace(/frontend\/js\/mapa\.js.*$/, "");
+    }
+    var url = basePath + "datuak/udalerri_datuak.geojson";
+    fetch(url)
       .then(function (erantzuna) {
         if (!erantzuna.ok) throw new Error("GeoJSON kargatzean errorea: " + erantzuna.status);
         return erantzuna.json();
